@@ -1,0 +1,9 @@
+Este es el juego!
+<% @letters.each do |letter| %>
+<h3><%= letter %></h3>
+<% end %>
+<form action='/score' method='POST'>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<input type='text' name='word'>
+<input type='submit' value='play'>
+</form>
